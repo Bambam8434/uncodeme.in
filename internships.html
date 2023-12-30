@@ -478,50 +478,30 @@
                 <div class="form-container footer-form-container FOOT-ER">
                   <form onsubmit="submitForm(event,0)" class="form" class="footer-form FOR-M">
                     <div class="input-section name-section IN-PUT">
-                      <input type="text" required name="name" onchange="setFormValue(this.name,this.value)" />
                       <label>Name</label>
+                      <input type="text" required name="name" onchange="setFormValue(this.name,this.value)" />
+                      
                     </div>
 
                     <div class="input-section name-section IN-PUT">
-                      <input type="email" required name="email" onchange="setFormValue(this.name,this.value)" />
                       <label>Email Address</label>
+                      <input type="email" required name="email" onchange="setFormValue(this.name,this.value)" />
+                     
                     </div>
 
                     <div class="input-section name-section IN-PUT">
+                      <label>Phone Number</label>
                       <input type="tel" required maxlength="10" minlength="10" id="mobile-input-1" name="mobile"
                         oninput="numberOnly('mobile-input-1')" onchange="setFormValue(this.name,this.value)" />
-                      <label>Phone Number</label>
+                      
                     </div>
 
                     <div class="input-section name-section IN-PUT">
-                      <input type="text" name="location" onchange="setFormValue(this.name,this.value)" required />
                       <label>Location</label>
+                      <input type="text" name="location" onchange="setFormValue(this.name,this.value)" required />
+                     
                     </div>
 
-                    <!-- <div class="training-course-select-section">
-                                            <select name="course" onchange="setFormValue(this.name,this.value)" required>
-                                                <option selected disabled value="">Select Your Course</option>
-                                                <option>Data Science</option>
-                                                <option>Full Stack Development</option>
-                                                <option>Software Testing</option>
-                                                <option>Digital Marketing</option>
-                                                <option>Network & Security</option>
-                                            </select>
-        
-                                            <select name="mode" onchange="setFormValue(this.name, this.value)" required>
-                                                <option selected disabled value="">Select Your Mode</option>
-                                                <option>Online</option>
-                                                <option>Offline</option>
-                                            </select>
-        
-                                        </div>
-        
-                                        <div class="subscibe">
-                                            <input type="checkbox" id="checkbox-btn" required>
-                                            <label>Subscribe to Our Uncodemy</label>
-                                        </div> -->
-
-                    <!-- <div class="submit-btn">Submit</div> -->
                     <input type="submit" class="submit-btn" id="submitBtn" />
                   </form>
                 </div>
