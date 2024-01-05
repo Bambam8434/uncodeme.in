@@ -1,3 +1,27 @@
+.mainc {
+  background: #ff5421;
+  /* min-width: 62px !important;
+  width: 92px !important;
+  font-size: 7px !important; */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px !important;
+  border-radius: 5px;
+  color: #fff !important;
+  min-width: 190px;
+  transition: background 0.5s, color 0.5s, transform 0.5s;
+  margin: 0 6px 6px 0;
+  padding: 8px 56px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+font-weight:600;
+}
+
+
 label,
 nav > menu {
   margin: 0;
@@ -70,10 +94,7 @@ nav > menu > menuitem menuitem menu {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   position: relative;
 }
-.navr a:hover {
-  background: #f7fafe;
-  color: #000 !important;
-}
+
 nav > menu > menuitem > a + menu:after {
   content: "";
   position: absolute;
@@ -127,26 +148,53 @@ body:hover > .categories nav menuitem > menu {
   pointer-events: none;
   opacity: 0;
 }
-@media (max-width: 320px) {
-  .categories {
-    top: -21px !important;
-  }
-  .nav-top-head {
-    height: 27vw !important;
-  }
-  .navr a {
-    min-width: 68px !important;
-    width: 142px;
-    font-size: 8px !important;
-  }
+@media (max-width: 375px) {
+
+
 }
-@media (max-width: 640px) {
+@media (max-width: 320px) {
+ 
+  .nav-top-head {
+    height: 20vw !important;
+  }
+
+  .has {
+    width: 100%; /* Use 100% of the parent container */
+    white-space: normal; /* Allow text to wrap to the next line */
+    word-wrap: break-word; /* Break word if it exceeds the container width (fallback) */
+    overflow-wrap: break-word; /* Ensure word breaking in browsers that support it */
+  }
   .categories {
     position: absolute;
-    left: 102px !important;
-    top: -20px !important;
-  }
+    left: 197px !important;
+    top: 14px;
 }
+menuitem:hover > menu {
+  top: 52px;
+  left: -107px !important;
+  background: black;
+}
+
+.navr a {
+  min-width: 147px !important;
+  font-size: 10px !important;
+  width: 119px !important;
+  font-weight: 600;
+  padding: 8px 15px !important;
+}
+
+
+/* @media (max-width: 767px)
+.mainc, .navr a {
+  padding: 8px 10px !important; */
+  .categories:hover .hii {
+    display: block;
+    width: 152px;
+}
+
+
+}
+
 @media only screen and (max-width: 345px) and (min-width: 321px) {
   .nav-top-head span {
     font-size: 11px !important;
@@ -175,29 +223,72 @@ body:hover > .categories nav menuitem > menu {
   }
 }
 @media (max-width: 767px) {
+  .TRaiN .courses {
+    width: 12rem !important;
+}
+  .mant1 {
+    position: absolute;
+    top: -39px !important;
+}
+.mant2 {
+  position: absolute;
+  top: -118px !important;
+}
+.mant3 {
+  position: absolute;
+  top: -132px !important;
+}
+  .mant4 {
+    position: absolute;
+    top: 2px !important;
+}
+  .mant5 {
+    position: absolute;
+    top: 2px !important;
+}
+  .mant0 {
+    position: absolute;
+    top: 2px !important;
+}
+  menuitem:hover > menu {
+    top: 52px;
+       left: -140px;
+       background:black;
+   }
+  .has {
+    width: 202px; /* Use 100% of the parent container */
+    white-space: normal; /* Allow text to wrap to the next line */
+    word-wrap: break-word; /* Break word if it exceeds the container width (fallback) */
+    overflow-wrap: break-word; /* Ensure word breaking in browsers that support it */
+  }
   .mainc,
   .navr a {
-    padding: 8px 10px !important;
+    padding: 8px 20px !important;
     background: #ff5421;
     color: #fff;
     box-shadow: none;
   }
   .categories {
     position: absolute;
-    left: 102px;
-    top: -28px;
-  }
+    left: 230px;
+    top: 14px ;
+}
   .navr a {
-    min-width: 155px;
-    font-size: 8px;
+    min-width: 160px;
+    font-size: 12px;
+    width: 170px;
   }
   .mainc {
+    background: #ff5421;
     min-width: 62px !important;
-    width: 10px !important;
+    width: 92px !important;
     font-size: 7px !important;
-    height: 10px;
+    height: 34px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 12px !important;
+    border-radius: 5px;
   }
   nav > menu > menuitem > a + menu:after {
     display: none !important;
@@ -244,6 +335,7 @@ body:hover > .categories nav menuitem > menu {
     }
     .pam li {
       width: 10px;
+      font-size:10px;
     }
     .categories {
       left: 220px !important;
@@ -259,13 +351,18 @@ body:hover > .categories nav menuitem > menu {
       margin: -17px -5px 0 0;
     }
   }
-  .navr a {
+  .mainc {
     min-width: 100px !important;
     padding: 8px 10px 8px 11px !important;
+    height: 34px;
+  
+    font-size: 12px !important;
   }
-  .mainc {
-    width: 10px;
-  }
+  /* .navr a {
+    min-width: 100px !important;
+    padding: 8px 10px 8px 11px !important;
+  } */
+ 
   .nav-top-head {
     display: flex !important;
     justify-content: flex-end !important;
@@ -279,6 +376,17 @@ body:hover > .categories nav menuitem > menu {
     flex-direction: column;
     max-height: 190px !important;
   }
+  .navigation-section ul .cls{
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 120px !important;
+    min-height: 38px !important;
+height: 80px !important;
+row-gap: 30px !important;
+  }
+
+
+
   .Train {
     height: 165px !important;
     overflow-y: scroll !important;
@@ -312,9 +420,11 @@ body:hover > .categories nav menuitem > menu {
   .nav-top-head {
     height: 33vw !important;
   }
-  .categories {
-    left: 100px !important;
-  }
+  /* menuitem:hover > menu {
+    top: 53px;
+    left: -9px;
+    background: black;
+} */
   .banner-image-container img {
     margin: -56px 0 0;
     height: 161px !important;
@@ -328,6 +438,7 @@ body:hover > .categories nav menuitem > menu {
   
   }
 }
+
 @media only screen and (min-width: 375px) and (max-width: 667px) {
   .Train,
   .course-right-section {
@@ -360,7 +471,7 @@ body:hover > .categories nav menuitem > menu {
   .SER ul {
     column-gap: 15px;
   }
-  .navr a {
+  .mainc {
     width: 18px;
     min-width: 100px;
     height: 35px;
@@ -368,6 +479,14 @@ body:hover > .categories nav menuitem > menu {
     font-size: 14px;
     justify-content: center;
   }
+  /* .navr a {
+    width: 18px;
+    min-width: 100px;
+    height: 35px;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+  } */
   .categories {
     top: 18px;
   }
@@ -386,3 +505,28 @@ body:hover > .categories nav menuitem > menu {
   position: relative !important;
   top: -75px !important;
 }
+.mant1{
+  position: absolute;
+  top: -48px ;
+}
+.mant2{
+  position: absolute;
+  top: -137px ;
+}
+.mant3{
+  position: absolute;
+  top: -90px ;
+}
+
+
+.COuRs{
+  display: grid !important;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.courses{
+  width: auto !important;
+}
+ .TRaiN .courses{
+  width: 18rem !important;
+ }
