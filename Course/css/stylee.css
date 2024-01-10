@@ -112,8 +112,9 @@ nav::after {
   margin: 0 0 0 -21px;
 }
 .loG {
-  height: 85px;
+  height: 90px;
   width: auto;
+  margin: 10px 0 0 0;
 }
 .navigation-container {
   margin: 0 0 10px;
@@ -218,7 +219,7 @@ nav::after {
   align-items: center;
   padding: 10px;
 }
-.courses {
+/* .courses {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,7 +229,27 @@ nav::after {
   width: 20rem;
   height: 132px;
   box-shadow: 0 0 10px 10px rgb(247 251 251);
+} */
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 0 0;
+  border: 1px dashed #ff5421 !important;
+  border-radius: 10px;
+  width: auto;
+  height: 132px;
+  box-shadow: 0 0 10px 10px rgb(247 251 251);
+  flex: 0 0 calc(33.333% - 35px);
+  /* margin: 10px; */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  /* padding: 15px; */
+  text-align: center;
 }
+
+
 @media screen and (min-width: 1000px) and (max-width: 1500px) {
   .courses {
     display: flex;

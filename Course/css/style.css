@@ -244,6 +244,10 @@ figure {
 b,
 strong {
   font-weight: bolder;
+
+}
+h5 b{
+  font-size: 16px;
 }
 sub,
 sup {
@@ -623,18 +627,18 @@ pre code {
 }
 @media (min-width: 1000px) {
   .course-video img {
-    max-height: 22rem !important;
-    max-width: 26rem !important;
-    margin: -38px -7rem 40px -23rem !important;
-  }
+    max-height: 20rem !important;
+    max-width: 24rem !important;
+    margin: -20px -7rem 40px -18rem !important;
+}
 }
 @media (min-width: 1300px) {
   .course-video img {
-    margin: -40px 0 0 !important;
+    margin: -10px 0 0 0 !important;
     padding: 0 !important;
     max-width: 30rem !important;
     max-height: 26rem !important;
-  }
+}
   .banner-left-box {
     display: flex;
     flex-direction: column;
@@ -7875,7 +7879,7 @@ h6 {
     font-size: 18px !important;
   }
   h1 {
-    font-size: 30px !important;
+    font-size: 25px !important;
   }
   .pg-program-cohorts-table-responsive {
     width: 100%;
@@ -7958,6 +7962,9 @@ h6 {
 }
 
 @media (max-width: 320px) {
+  #placed-candidates {
+    margin: -10px 0 -75px;
+}
   .mobile-whats .whats-box img {
     display: block !important;
     height: 165px !important;
@@ -8052,7 +8059,7 @@ h6 {
     margin: 20px 0 0 -1px !important;
   }
   .duration .tab-industry .nav-tabs {
-    margin: 15rem 0 0 !important;
+    margin: 19rem 0 0 !important;
   }
   .en {
     font-size: 8px !important;
@@ -8362,7 +8369,7 @@ small {
     border-radius: 1rem;
   }
   .duration .tab-industry .nav-tabs {
-    margin: 11rem 0 0;
+    margin: 12rem 0 0;
   }
   #pg-program-cohorts-section,
   #pg-program-cohorts-section h2,
@@ -8470,7 +8477,7 @@ small {
   height: 20px !important;
 }
 .banner-heading h1 {
-  font-size: 33px !important;
+  font-size: 33px ;
 }
 .banner-heading {
   max-width: 50vw;

@@ -1,4 +1,4 @@
-
+console.log("script first part is running");
 var schema = {
   "@context": "https://schema.org/",
   "@type": "Product",
@@ -118,7 +118,7 @@ function expandText(e) {
       : ((e.style.height = "auto"), e.classList.add("expanded"));
 }
 (window.onload = function () {
-
+  console.log("hello loaded");
   var e = document.createElement("meta");
   (e.httpEquiv = "X-UA-Compatible"),
     (e.content = "IE=edge"),
@@ -127,14 +127,14 @@ function expandText(e) {
     document
       .querySelectorAll(".learner-number .digit")
       .forEach(function (e, t) {
-     
+        console.log("for each leramner"),
           (e.style.animation = "fallingEffect 1s ease-in-out"),
           (e.style.animationFillMode = "forwards"),
           (e.style.animationDelay = 0.1 * (t + 1) + "s");
       });
   var t = new IntersectionObserver(
       function (e, o) {
-       
+        console.log("handle intersection"),
           e.forEach(function (e, t) {
             e.isIntersecting &&
               (setTimeout(
@@ -180,12 +180,12 @@ function expandText(e) {
     }, 5e3));
 }),
   document.addEventListener("DOMContentLoaded", function () {
-
+    console.log("dom content load");
     const t = document.getElementById("footer-section");
-   
+    console.log("outsiode condi"),
       document.body.clientHeight,
       window.innerHeight;
-
+    console.log("inside condi"),
       fetch("/footer.html")
         .then((e) => e.text())
         .then((e) => {
@@ -195,21 +195,21 @@ function expandText(e) {
           console.error(e);
         });
     const o = document.getElementById("main-nav");
-
+    console.log("outsiode condi"),
       document.body.clientHeight,
       window.innerHeight;
-
+    console.log("inside condi"),
       fetch("/navbar.html")
         .then((e) => e.text())
         .then((e) => {
           o.innerHTML = e;
           let t = document.getElementsByClassName("course-name-dropdown");
-       
+          console.log("drop down", t);
           for (let e = 0; e < t.length; e++)
-        
+            console.log("for loop down"),
               !(function (o) {
                 t[o].addEventListener("click", function () {
-      
+                  console.log("event listener");
                   var e = document.getElementById("active-dropdown-course"),
                     t = document.getElementById("active-course");
                   e && (e.removeAttribute("id"), t.removeAttribute("id")),
@@ -237,7 +237,7 @@ let popUpFormValue = {
 };
 function setPopUpFormValue(e, t) {
   var o, n, a;
-
+  console.log("set up value", e, t),
     ("fromTime" !== e && "toTime" !== e) ||
       (12 < (a = (o = t.split(":"))[0])
         ? ((n = "PM"), (a -= 12) < 10 && (a = "0" + a))
@@ -245,15 +245,15 @@ function setPopUpFormValue(e, t) {
           ? ((n = "AM"), 0 == a && (a = 12))
           : (n = "PM"),
       (t = a + ` : ${o[1]} ` + n)),
-    (popUpFormValue[e] = t)
-  
+    (popUpFormValue[e] = t),
+    console.log("pop up value =", popUpFormValue);
 }
 function showDropDown(e) {
   var t = document.getElementsByClassName("dropdown")[0],
     o = document.getElementsByClassName("dropdown")[1],
     n = window.getComputedStyle(t).getPropertyValue("display"),
     a = window.getComputedStyle(o).getPropertyValue("display");
-
+  console.log("show drop down", n, a),
     0 === e
       ? "none" === n
         ? (window.innerWidth <= 780
@@ -274,6 +274,7 @@ function showDropDown(e) {
             (document.getElementById("course-text").style.color = "black")));
 }
 function showNavigation() {
+  console.log("show navigation func");
   var e = document.querySelector(".navigation-container");
   "none" === window.getComputedStyle(e).display
     ? ((e.style.display = "block"), (document.body.style.overflow = "hidden"))
@@ -347,7 +348,8 @@ let downloadStatus = !1,
   };
 function setDownload(e) {
   (downloadStatus = !0),
-    (pdfUrl = allPdf[e])
+    (pdfUrl = allPdf[e]),
+    console.log("pdf =", pdfUrl, e, allPdf.option);
 }
 async function submitForm(e) {
   e.preventDefault();
@@ -358,7 +360,7 @@ async function submitForm(e) {
     e.append("location", formValue.location);
   try {
     var t = await axios.post("http://localhost/formSubmitUncodemyIn.php", e);
-
+    console.log("response =", t),
       1 === t.data
         ? ((document.getElementById("form-parent").style.display = "none"),
           (document.body.style.overflow = "auto"),
@@ -366,7 +368,7 @@ async function submitForm(e) {
           document.getElementById("form").reset(),
           !0 === downloadStatus
             ? (window.open(pdfUrl, "_blank"),
-             
+              console.log("pdf =", pdfUrl),
               (downloadStatus = !1))
             : Swal.fire({
                 icon: "success",
@@ -377,7 +379,7 @@ async function submitForm(e) {
               }))
         : alert("sorry some error is occured");
   } catch (e) {
-  
+    console.log("error =", e.message),
       alert("sorry server issue occured please try again", e.message);
   }
 }
@@ -393,7 +395,7 @@ async function submitPopUpForm(e) {
     e.append("toTime", popUpFormValue.toTime);
   try {
     var t = await axios.post("http://localhost/DemoDetailForm.php", e);
-    
+    console.log("resposne =", t),
       1 === t.data
         ? ((document.querySelector(".pop-up-form-container").style.display =
             "none"),
@@ -408,7 +410,7 @@ async function submitPopUpForm(e) {
           }))
         : alert("sorry some error is occured");
   } catch (e) {
-  
+    console.log("error =", e.message),
       alert("sorry server issue occured please try again");
   }
 }
@@ -420,7 +422,8 @@ window.onscroll = () => {
   e >= document.querySelector(".course-banner").scrollHeight
     ? ((o.style.display = "block"),
       (n.style.display = "none"),
-      (t.style.display = "none"))
+      (t.style.display = "none"),
+      console.log("scrolling", o))
     : ((o.style.display = "none"),
       900 < window.innerWidth
         ? ((n.style.display = "flex"), (t.style.display = "flex"))

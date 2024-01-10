@@ -168,6 +168,7 @@
   .courses {
     width: auto;
     height: 145px !important;
+    min-height: 130px;
   }
   #active-course {
     display: flex !important;
@@ -586,7 +587,7 @@
   }
   .nav-top-head span {
     margin: 0 2px 0 0;
-    font-size: 11px;
+    font-size: 8px;
 }
   .course-right-section {
     width: 100% !important;
@@ -661,6 +662,13 @@
   }
 }
 @media screen and (min-width: 901px) and (max-width: 1100px) {
+  .certified-logo {
+    column-gap: 5px !important;
+}
+.career-session-right-box img {
+  width: 100%;
+  margin:auto;
+}
   .scalar-recipe-card-section {
     justify-content: space-around;
     width: 90vw;
@@ -934,11 +942,15 @@
   }
   .banner-left-box {
     padding: 0 0 0 15px;
-    margin: 0 0 0 -70px;
+    /* margin: 0 0 0 -70px; */
   }
   .career-main-container {
     padding: 0 0 0 16px;
   }
+  .career-session-right-box img {
+    width: 100%;
+    margin: 0 ;
+}
   .career-session-right-box {
     display: flex;
     justify-content: center;
